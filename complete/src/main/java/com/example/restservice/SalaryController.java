@@ -5,17 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.util.Map;
 
 @RestController
 public class SalaryController {
 
     @Autowired
-    GreetingService salaryService;
+    SalaryService salaryService;
 
     @GetMapping("/salary")
-    public List<CGEmployee> salary(@RequestParam(value = "name", defaultValue = "neha") String name) {
-        List<CGEmployee> employeeList = salaryService.getSalary(name);
+    public Map<String, Integer> salary(@RequestParam(value = "name", defaultValue = "neha") String name) {
+        Map<String, Integer> employeeList = salaryService.getSalary(name);
         return employeeList;
     }
 }

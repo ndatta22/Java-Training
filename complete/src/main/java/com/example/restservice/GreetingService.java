@@ -28,15 +28,4 @@ public class GreetingService {
         }
         return returnDetailList;
     }
-//    public Map<String, Integer> getSalaryDetail1(List<CGEmployee> cgEmployeeList) {
-//        Map<String, Integer> salaryDetail = new HashMap<>();
-//        try {
-//            salaryDetail.put(cgEmployeeList.get(1).getEmpno(), cgEmployeeList.get(1).getSalary() + 100);
-//        }
-//        catch(Exception e){
-//            System.out.println("we should not try to access elements of an empty list");
-//        }
-//        return salaryDetail;
-//    }
-
 }
